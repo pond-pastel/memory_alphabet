@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="覚えたアルファベットを答えるゲームです。">
+    <meta name="keywords" content="アルファベット,記憶力,ゲーム,脳トレ,無料">
+    <title>Memory Alphabet</title>
+    <link rel="stylesheet" href="memory_alphabet.css">
+</head>
+<body>
+    <!--Ver.2.1.0-->
+    <script src="memory_alphabet.js"></script>
+    <div class="settings">
+        <div>
+            答えるアルファベット
+            <input id="count" type="range" value="2" min="2" max="10" step="1">
+            <span id="show-count">2</span>個前
+        </div>
+        <div>
+            表示形式
+            <select id="letter">
+                <option value="lowercase">小文字</option>
+                <option value="uppercase" selected>大文字</option>
+            </select>
+        </div>
+        <div>
+            操作方法
+            <select id="how-to-operate">
+                <option value="keyboard" selected>キーボード</option>
+                <option value="touch">タッチ</option>
+            </select>
+        </div>
+        <div id="high-score"></div>
+        <p>
+            <span id="rules"></span>
+        </p>
+        <div class="center">
+            <div class="center keyboard">
+                <span class="space-bar start"></span>を押してスタート
+            </div>
+            <span class="touch start" style="display: none;">スタート</span>
+        </div>
+    </div>
+    <div class="playing" style="display: none;">
+        <div class="key">
+            <span class="alphabet" id="alphabet-area"></span>
+        </div>
+        <div id="choices-box">
+            <div id="choices"></div>
+        </div>
+        <div>
+            <span id="heart"></span>
+        </div>
+        <div class="center" id="next">
+            <div class="center keyboard">
+                <span class="space-bar next"></span>で次へ
+            </div>
+            <span class="touch next" style="display: none;">次へ</span>
+        </div>
+        <div class="center" id="question" style="display: none;">
+            <span id="question-count"></span>つ前のアルファベットは？
+        </div>
+    </div>
+    <div class="result" style="display: none;">
+        <div class="center gameover">Game Over</div>
+        <p class="score">Score: <span id="current-score-result"></span></p>
+        <p class="score" id="high-score-bg">High Score: <span id="high-score-result"></span></p>
+        <h2 class="miss">ミス</h2>
+        <div id="miss-group"></div>
+        <div class="center">
+            <div class="center keyboard">
+                <span class="space-bar return"></span>で戻る
+            </div>
+            <span class="touch return" style="display: none;">戻る</span>
+        </div>
+    </div>
+</body>
+</html>

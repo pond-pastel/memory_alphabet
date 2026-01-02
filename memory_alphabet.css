@@ -1,0 +1,127 @@
+:root {
+    --theme-ln: #50f0d0;
+    --theme-ln-hv: #a0ffef;
+    --theme-bg: #101010;
+    --theme-ms: #ff4040;
+    --theme-hs: #ffff55;
+    background: var(--theme-bg);
+    color: var(--theme-ln);
+    font-family: sans-serif;
+}
+
+input[type="range"] {
+    accent-color: var(--theme-ln);
+    cursor: pointer;
+}
+
+select {
+    background: var(--theme-ln);
+    color: var(--theme-bg);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover {
+        background: var(--theme-ln-hv);
+    }
+}
+
+.key {
+    position: fixed;
+    top: 20vh;
+    left: 0;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    font-size: 30vh;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.space-bar,
+.touch {
+    border-radius: 5px;
+    padding: 0 10px;
+    background: var(--theme-ln);
+    color: var(--theme-bg);
+}
+
+.space-bar::before {
+    content: "Space";
+}
+
+.touch {
+    cursor: pointer;
+}
+
+.alphabet {
+    border-radius: 1rem;
+    text-align: center;
+    background: var(--theme-ln);
+    color: var(--theme-bg);
+}
+
+.choice {
+    font-size: 2rem;
+    padding: 0.5em;
+    margin: 0 5px;
+    width: 1.5em;
+    height: 1.5em;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.gameover {
+    font-size: 10vw;
+}
+
+.score,
+.miss {
+    padding-left: 5px;
+}
+
+.score {
+    color: var(--theme-bg);
+    background: linear-gradient(to right, var(--theme-ln) 10%, var(--theme-bg) 50%);
+}
+
+.miss {
+    color: white;
+    background: linear-gradient(to right, var(--theme-ms) 10%, var(--theme-bg) 50%);
+}
+
+#miss-group {
+    max-height: 30vh;
+    overflow: scroll;
+}
+
+#rules {
+    padding: 5px 10px;
+    border-radius: 1em;
+    border: solid 2px var(--theme-ln);
+    cursor: pointer;
+    &::before {
+        content: "ルール説明";
+    }
+    &:hover {
+        border-color: var(--theme-ln-hv);
+        color: var(--theme-ln-hv);
+    }
+}
+
+#alphabet-area {
+    height: 1.5em;
+    width: 1.5em;
+    cursor: none;
+}
+
+#choices {
+    position: fixed;
+    top: calc(65vh + 10px);
+    max-width: calc(100vw - 16px);
+    overflow-x: scroll;
+    display: flex;
+}
