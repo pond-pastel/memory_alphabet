@@ -1,0 +1,11 @@
+:root * {
+    background-color: lightpink;
+    color: lightseagreen;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
