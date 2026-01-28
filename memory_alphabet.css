@@ -33,7 +33,6 @@ select {
     width: 1em;
     height: 1em;
     line-height: 1em;
-    transition: ease 300ms top;
     & .effect {
         position: absolute;
         left: 0;
